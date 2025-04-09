@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import emailjs from '@emailjs/browser'
 
 /**
  * Componente Contact - Formulário de contato da landing page
@@ -15,19 +16,54 @@ const Contact = () => {
     reset 
   } = useForm()
 
+  // Estado para controlar o status do envio
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' })
+
+  // Inicializa o EmailJS
+  emailjs.init('YOUR_PUBLIC_KEY') // Substitua pelo seu public key do EmailJS
+
   // Função para lidar com o envio do formulário
-  const onSubmit = (data) => {
-    // Simulação de envio de dados para um backend
-    console.log('Dados do formulário:', data)
-    
-    // Em uma implementação real, aqui seria feita uma chamada para uma API
-    // Exemplo: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
-    
-    // Feedback para o usuário
-    alert('Mensagem enviada com sucesso! Em breve entraremos em contato.')
-    
-    // Limpa o formulário após envio
-    reset()
+  const onSubmit = async (data) => {
+    setIsSubmitting(true)
+    setSubmitStatus({ type: '', message: '' })
+
+    try {
+      // Prepara o template com os dados do formulário
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        from_phone: data.phone,
+        company: data.company || 'Não informado',
+        subject: data.subject,
+        message: data.message
+      }
+
+      // Envia o email usando EmailJS
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Substitua pelo seu service ID do EmailJS
+        'YOUR_TEMPLATE_ID', // Substitua pelo seu template ID do EmailJS
+        templateParams
+      )
+
+      // Feedback de sucesso
+      setSubmitStatus({
+        type: 'success',
+        message: 'Mensagem enviada com sucesso! Em breve entraremos em contato.'
+      })
+
+      // Limpa o formulário após envio bem-sucedido
+      reset()
+    } catch (error) {
+      // Feedback de erro
+      setSubmitStatus({
+        type: 'error',
+        message: 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.'
+      })
+      console.error('Erro ao enviar email:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -187,13 +223,27 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Feedback de status */}
+            {submitStatus.message && (
+              <div className={`p-4 rounded-md ${
+                submitStatus.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+              }`}>
+                {submitStatus.message}
+              </div>
+            )}
+
             {/* Botão de Envio */}
             <div className="flex justify-end">
               <button 
-                type="submit" 
-                className="px-6 py-3 text-white transition-all duration-300 rounded-md bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                type="submit"
+                disabled={isSubmitting}
+                className={`px-6 py-3 text-white transition-all duration-300 rounded-md ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-primary hover:bg-primary/90'
+                } focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
               >
-                Enviar Mensagem
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
               </button>
             </div>
           </form>
