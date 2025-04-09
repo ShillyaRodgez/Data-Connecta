@@ -35,9 +35,9 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center text-2xl font-bold text-primary font-poppins">
+        <a href="#" className="flex items-center text-2xl tracking-tight font-semibold text-primary font-heading">
           <img src={logo} alt="Data Connecta Logo" className="h-8 w-auto mr-2" />
-          Data<span className="text-secondary">Connecta</span>
+          Data<span className="text-secondary font-medium">Connecta</span>
         </a>
 
         {/* Menu Desktop */}
