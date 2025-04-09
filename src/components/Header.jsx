@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/lg.svg'
 
+// Lista de seções para monitorar
+const sections = ['home', 'services', 'projects', 'about', 'contact']
+
 /**
  * Componente Header - Barra de navegação principal do site
  * Inclui logo, links de navegação e botão de contato
@@ -9,14 +12,29 @@ import logo from '../assets/lg.svg'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
-  // Controla a mudança de estilo do header ao rolar a página
+  // Controla a mudança de estilo do header e seção ativa ao rolar a página
   useEffect(() => {
     const handleScroll = () => {
+      // Atualiza o estado do header
       if (window.scrollY > 50) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
+      }
+
+      // Detecta a seção atual
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section)
+        if (!element) return false
+
+        const rect = element.getBoundingClientRect()
+        return rect.top <= 150 && rect.bottom >= 150
+      })
+
+      if (currentSection) {
+        setActiveSection(currentSection)
       }
     }
 
@@ -44,19 +62,44 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-8">
             <li>
-              <a href="#" className="font-medium hover:text-primary">Home</a>
+              <a 
+                href="#home" 
+                className={`font-medium transition-colors duration-300 ${activeSection === 'home' ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                Home
+              </a>
             </li>
             <li>
-              <a href="#services" className="font-medium hover:text-primary">Serviços</a>
+              <a 
+                href="#services" 
+                className={`font-medium transition-colors duration-300 ${activeSection === 'services' ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                Serviços
+              </a>
             </li>
             <li>
-              <a href="#projects" className="font-medium hover:text-primary">Projetos</a>
+              <a 
+                href="#projects" 
+                className={`font-medium transition-colors duration-300 ${activeSection === 'projects' ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                Projetos
+              </a>
             </li>
             <li>
-              <a href="#about" className="font-medium hover:text-primary">Sobre Nós</a>
+              <a 
+                href="#about" 
+                className={`font-medium transition-colors duration-300 ${activeSection === 'about' ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                Sobre Nós
+              </a>
             </li>
             <li>
-              <a href="#contact" className="btn btn-primary">Contato</a>
+              <a 
+                href="#contact" 
+                className={`btn ${activeSection === 'contact' ? 'btn-secondary' : 'btn-primary'}`}
+              >
+                Contato
+              </a>
             </li>
           </ul>
         </nav>
