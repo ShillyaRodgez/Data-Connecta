@@ -174,9 +174,9 @@ const Contact = () => {
                 <option value="dashboards">Dashboards e Visualização de Dados</option>
                 <option value="analytics">Análise de Dados</option>
                 <option value="software">Desenvolvimento de Software</option>
-                <option value="integration">Integração de Sistemas</option>
-                <option value="consulting">Consultoria</option>
-                <option value="other">Outro Assunto</option>
+                <option value="integracao">Integração de Sistemas</option>
+                <option value="consultoria">Consultoria</option>
+                <option value="outros">Outros Assuntos</option>
               </select>
               {errors.subject && (
                 <p className="error-message">{errors.subject.message}</p>
