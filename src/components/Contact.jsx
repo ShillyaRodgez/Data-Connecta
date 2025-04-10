@@ -71,7 +71,7 @@ const Contact = () => {
       <div className="container max-w-5xl">
         <h2 className="section-title">Entre em Contato</h2>
         <p className="section-subtitle">
-          Estamos prontos para ajudar sua empresa a transformar dados em resultados. 
+          Estamos prontos para ajudar sua empresa a transformar dados, código e criatividade em soluções que fazem sentido. 
           Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
         </p>
 

@@ -12,10 +12,10 @@ const Hero = () => {
         {/* Conteúdo de texto */}
         <div className="text-center md:text-left">
           <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Transformando <span className="text-primary">Dados</span> em <span className="text-secondary">Soluções</span>
+            Conectando <span className="text-primary"> você </span> ao que <span className="text-secondary"> importa </span>
           </h1>
           <p className="mb-8 text-lg text-gray-600 md:text-xl">
-            Especialistas em análise de dados, dashboards inteligentes e desenvolvimento de software personalizado para impulsionar seu negócio.
+            Especializada em análise de dados, dashboards inteligentes e desenvolvimento de software personalizado para impulsionar seu negócio.
           </p>
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-start justify-center">
             <a href="#services" className="btn btn-primary">
