@@ -18,7 +18,7 @@ const Footer = () => {
               Data<span className="text-secondary">Connecta</span>
             </a>
             <p className="mb-4 text-gray-300">
-              Transformando dados em soluções inteligentes para impulsionar o crescimento do seu negócio.
+              Conectando você ao que importa para impulsionar o desenvolvimento do seu negócio.
             </p>
             <div className="flex space-x-4">
               {/* Ícones de redes sociais */}
