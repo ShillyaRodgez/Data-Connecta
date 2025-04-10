@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="pt-16 pb-8 text-white bg-dark">
       <div className="container">
-        <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr]">
           {/* Logo e descrição */}
           <div>
             <a href="#" className="inline-block mb-4 text-2xl font-bold">
