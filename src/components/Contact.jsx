@@ -21,7 +21,7 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' })
 
   // Inicializa o EmailJS
-  emailjs.init('YOUR_PUBLIC_KEY') // Substitua pelo seu public key do EmailJS
+  emailjs.init('bt9K2JHnOGxGSRJ_c') // Substitua pelo seu public key do EmailJS
 
   // Função para lidar com o envio do formulário
   const onSubmit = async (data) => {
@@ -41,8 +41,8 @@ const Contact = () => {
 
       // Envia o email usando EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Substitua pelo seu service ID do EmailJS
-        'YOUR_TEMPLATE_ID', // Substitua pelo seu template ID do EmailJS
+        'service_ji1liy5', // Substitua pelo seu service ID do EmailJS
+        'template_xc13n0p', // Substitua pelo seu template ID do EmailJS
         templateParams
       )
 
