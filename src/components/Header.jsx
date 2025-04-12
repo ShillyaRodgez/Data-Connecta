@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/logo xx.png'
+import logo from '../assets/log (2).png'
 
 // Lista de seções para monitorar
 const sections = ['home', 'services', 'projects', 'about', 'contact']
@@ -54,7 +54,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center text-2xl tracking-tight font-semibold text-primary font-heading">
-          <img src={logo} alt="Data Connecta Logo" className="h-8 w-auto mr-2" />
+          <img src={logo} alt="Data Connecta Logo" className="h-8 w-auto mr-1" />
           Data<span className="text-secondary font-medium">Connecta</span>
         </a>
 
