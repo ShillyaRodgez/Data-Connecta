@@ -14,8 +14,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr]">
           {/* Logo e descrição */}
           <div>
-            <a href="#" className="inline-block mb-4 text-2xl font-bold">
-              Data<span className="text-secondary">Connecta</span>
+            <a href="#" className="inline-block mb-4 text-2xl font-semibold text-white font-heading">
+              Data<span className="text-secondary font-medium">Connecta</span>
             </a>
             <p className="mb-4 text-gray-300">
               Conectando você ao que importa para impulsionar o desenvolvimento do seu negócio.
