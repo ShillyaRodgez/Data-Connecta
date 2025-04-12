@@ -8,7 +8,7 @@ import React from 'react'
 const About = () => {
   // Dados das estatísticas da empresa
   const stats = [
-    { id: 1, value: '5+', label: 'Anos de Experiência' },
+    { id: 1, value: '14+', label: 'Anos de Experiência' },
     { id: 2, value: '50+', label: 'Projetos Entregues' },
     { id: 3, value: '30+', label: 'Clientes Satisfeitos' },
     { id: 4, value: '100%', label: 'Comprometimento' }
@@ -45,7 +45,7 @@ const About = () => {
           
           {/* Conteúdo de texto */}
           <div>
-            <h3 className="mb-4 text-2xl font-bold text-primary">Transformando dados em resultados</h3>
+            <h3 className="mb-4 text-2xl font-bold text-primary">Conectando você ao que importa</h3>
             <p className="mb-4 text-gray-600">
               A Data Connecta nasceu da visão de que os dados são o ativo mais valioso das empresas modernas. 
               Nossa missão é ajudar organizações a extrair o máximo valor de seus dados, transformando-os em 
