@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/em.png'
+import logo from '../assets/log (2).png'
 
 // Lista de seções para monitorar
 const sections = ['home', 'services', 'projects', 'about', 'contact']
