@@ -53,8 +53,8 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center text-2xl tracking-tight font-semibold text-primary font-heading">
-          <img src={logo} alt="Data Connecta Logo" className="h-8 w-auto mr-1" />
+        <a href="#" className="flex items-center text-3xl tracking-tight font-semibold text-primary font-heading">
+          <img src={logo} alt="Data Connecta Logo" className="h-12 w-auto mr-2" />
           Data<span className="text-secondary font-medium">Connecta</span>
         </a>
 
