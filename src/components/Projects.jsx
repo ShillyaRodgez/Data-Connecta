@@ -1,5 +1,6 @@
 import React from 'react'
 import Dashboard from '../assets/Dashboard.png'
+import Business from '../assets/Business.png'
 
 /**
  * Componente Projects - Seção de projetos realizados pela Data Connecta
@@ -18,21 +19,21 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Sistema de Gestão de Dados',
-      description: 'Plataforma completa para integração, processamento e visualização de dados empresariais, com módulos personalizados para diferentes departamentos.',
-      image: 'https://via.placeholder.com/600x400?text=Sistema+de+Gestão',
-      technologies: ['Angular', 'Python', 'PostgreSQL', 'Docker'],
+      title: 'Portal de Business Intelligence',
+      description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
+      image: Business,
+      technologies: ['GCP', 'React', 'Python', 'Power BI', 'PHP', 'Metabase'],
     },
     {
       id: 3,
-      title: 'Aplicativo de Análise Preditiva',
+      title: 'Mudar esse aqui também',
       description: 'Solução de análise preditiva que utiliza machine learning para prever tendências de mercado e comportamento de consumidores.',
       image: 'https://via.placeholder.com/600x400?text=Análise+Preditiva',
       technologies: ['Python', 'TensorFlow', 'Flask', 'AWS'],
     },
     {
       id: 4,
-      title: 'Portal de Business Intelligence',
+      title: 'Mudar esse aqui',
       description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
       image: 'https://via.placeholder.com/600x400?text=Portal+BI',
       technologies: ['React', 'Power BI', 'SQL Server', 'Azure'],
@@ -53,7 +54,7 @@ const Projects = () => {
               key={project.id} 
               className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-primary/20"
             >
-              <div className="overflow-hidden h-55">
+              <div className="overflow-hidden h-[400px]">
                 <img 
                   src={project.image} 
                   alt={project.title} 
