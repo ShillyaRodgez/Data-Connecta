@@ -1,6 +1,7 @@
 import React from 'react'
 import Dashboard from '../assets/Dashboard.png'
 import Business from '../assets/Business.png'
+import SistemaERP from '../assets/Sistema ERP.png'
 
 /**
  * Componente Projects - Seção de projetos realizados pela Data Connecta
@@ -21,14 +22,14 @@ const Projects = () => {
       id: 2,
       title: 'Sistema ERP (Enterprise Resource Planning)',
       description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
-      image: 'https://via.placeholder.com/600x400?text=Análise+Preditiva',
+      image: SistemaERP,
       technologies: ['React', 'Python', 'PHP', 'Laravel'],
     },
     {
       id: 3,
-      title: 'Mudar esse aqui também',
+      title: 'Agente de IA',
       description: 'Solução de análise preditiva que utiliza machine learning para prever tendências de mercado e comportamento de consumidores.',
-      image: 'https://via.placeholder.com/600x400?text=Análise+Preditiva',
+      image: SistemaERP,
       technologies: ['Python', 'TensorFlow', 'Flask', 'AWS'],
     },
     {
