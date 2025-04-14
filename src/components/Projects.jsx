@@ -31,7 +31,7 @@ const Projects = () => {
       title: 'Agente IA',
       description: 'O Agende IA é uma ferramenta inteligente para agendamentos automatizados, otimizando o tempo e a organização de compromissos.',
       image: AgenteIA,
-      technologies: ['React', 'Python', 'PHP', 'langchain', 'BigQuery', 'OpenAI'],
+      technologies: ['React', 'Python', 'PHP', 'langchain', 'BigQuery'],
     },
     {
       id: 4,
