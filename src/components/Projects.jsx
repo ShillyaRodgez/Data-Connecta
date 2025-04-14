@@ -15,14 +15,14 @@ const Projects = () => {
       title: 'Dashboard Financeiro',
       description: 'Dashboard interativo para análise de indicadores financeiros, permitindo visualização de tendências e tomada de decisões estratégicas.',
       image: Dashboard,
-      technologies: ['GCP', 'Pyton', 'MongoDB', 'PHP', 'Metabase'],
+      technologies: ['GCP', 'Python', 'MongoDB', 'PHP', 'Metabase'],
     },
     {
       id: 2,
-      title: 'Portal de Business Intelligence',
+      title: 'Sistema ERP (Enterprise Resource Planning)',
       description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
-      image: Business,
-      technologies: ['GCP', 'React', 'Python', 'Power BI', 'PHP', 'Metabase'],
+      image: 'https://via.placeholder.com/600x400?text=Análise+Preditiva',
+      technologies: ['React', 'Python', 'PHP', 'Laravel'],
     },
     {
       id: 3,
@@ -33,10 +33,10 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Mudar esse aqui',
+      title: 'Portal de Business Intelligence',
       description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
-      image: 'https://via.placeholder.com/600x400?text=Portal+BI',
-      technologies: ['React', 'Power BI', 'SQL Server', 'Azure'],
+      image: Business,
+      technologies: ['GCP', 'React', 'Python', 'Power BI', 'PHP', 'Metabase'],
     },
   ]
 
