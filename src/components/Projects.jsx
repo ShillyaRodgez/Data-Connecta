@@ -1,4 +1,5 @@
 import React from 'react'
+import Dashboard from '../assets/Dashboard.png'
 
 /**
  * Componente Projects - Seção de projetos realizados pela Data Connecta
@@ -12,8 +13,8 @@ const Projects = () => {
       id: 1,
       title: 'Dashboard Financeiro',
       description: 'Dashboard interativo para análise de indicadores financeiros, permitindo visualização de tendências e tomada de decisões estratégicas.',
-      image: 'https://via.placeholder.com/600x400?text=Dashboard+Financeiro',
-      technologies: ['React', 'D3.js', 'Node.js', 'MongoDB'],
+      image: Dashboard,
+      technologies: ['GCP', 'Pyton', 'MongoDB', 'PHP', 'Metabase'],
     },
     {
       id: 2,
@@ -43,7 +44,7 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Nossos Projetos</h2>
         <p className="section-subtitle">
-          Conheça alguns dos projetos que desenvolvemos, transformando dados em soluções de valor para nossos clientes.
+          Conheça alguns dos projetos que desenvolvemos, sempre conectando você ao que importa.
         </p>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -52,7 +53,7 @@ const Projects = () => {
               key={project.id} 
               className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-primary/20"
             >
-              <div className="overflow-hidden h-60">
+              <div className="overflow-hidden h-55">
                 <img 
                   src={project.image} 
                   alt={project.title} 
