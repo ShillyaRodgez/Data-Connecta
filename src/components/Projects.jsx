@@ -2,6 +2,7 @@ import React from 'react'
 import Dashboard from '../assets/Dashboard.png'
 import Business from '../assets/Business.png'
 import SistemaERP from '../assets/Sistema ERP.png'
+import AgenteIA from '../assets/Agente IA.png'
 
 /**
  * Componente Projects - Seção de projetos realizados pela Data Connecta
@@ -21,16 +22,16 @@ const Projects = () => {
     {
       id: 2,
       title: 'Sistema ERP (Enterprise Resource Planning)',
-      description: 'Portal centralizado de BI com relatórios personalizados, dashboards interativos e ferramentas de análise para diferentes níveis gerenciais.',
+      description: 'Um sistema ERP (Enterprise Resource Planning) integra e automatiza os processos principais de uma empresa em um único software.',
       image: SistemaERP,
       technologies: ['React', 'Python', 'PHP', 'Laravel'],
     },
     {
       id: 3,
-      title: 'Agente de IA',
-      description: 'Solução de análise preditiva que utiliza machine learning para prever tendências de mercado e comportamento de consumidores.',
-      image: SistemaERP,
-      technologies: ['Python', 'TensorFlow', 'Flask', 'AWS'],
+      title: 'Agente IA',
+      description: 'O Agende IA é uma ferramenta inteligente para agendamentos automatizados, otimizando o tempo e a organização de compromissos.',
+      image: AgenteIA,
+      technologies: ['React', 'Python', 'PHP', 'langchain', 'BigQuery', 'OpenAI'],
     },
     {
       id: 4,
